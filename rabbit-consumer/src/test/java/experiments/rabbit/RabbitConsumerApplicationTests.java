@@ -1,4 +1,4 @@
-package experiments.rabbit.consumer;
+package experiments.rabbit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

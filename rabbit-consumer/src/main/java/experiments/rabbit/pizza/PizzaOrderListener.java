@@ -1,6 +1,6 @@
 package experiments.rabbit.pizza;
 
-import experiments.rabbit.pizza.domain.OrderDto;
+import experiments.rabbit.pizza.domain.PizzaOrderDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -22,8 +22,8 @@ import org.springframework.stereotype.Component;
 public class PizzaOrderListener {
 
     @RabbitHandler
-    public void handlePizzaOrder(@Payload OrderDto orderDto) {
-        log.info("pizza order with id {}", orderDto.getPizzaId());
+    public void handlePizzaOrder(@Payload PizzaOrderDto pizzaOrderDto) {
+        log.info("pizza order with id {}", pizzaOrderDto.getPizzaId());
     }
 
 }

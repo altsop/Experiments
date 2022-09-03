@@ -1,6 +1,6 @@
 package experiments.rabbit.pizza;
 
-import experiments.rabbit.pizza.domain.OrderDto;
+import experiments.rabbit.pizza.domain.PizzaOrderDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +13,8 @@ public class PizzaController {
     private final PizzaService pizzaService;
 
     @PostMapping
-    public void makeOrder(@RequestBody OrderDto orderDto) {
-        pizzaService.makeOrder(orderDto);
+    public void makeOrder(@RequestBody PizzaOrderDto pizzaOrderDto) {
+        pizzaService.makeOrder(pizzaOrderDto);
     }
 
 }

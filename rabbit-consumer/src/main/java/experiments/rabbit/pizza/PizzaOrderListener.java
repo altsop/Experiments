@@ -23,6 +23,9 @@ public class PizzaOrderListener {
 
     @RabbitHandler
     public void handlePizzaOrder(@Payload PizzaOrderDto pizzaOrderDto) {
+        if (pizzaOrderDto.getPizzaId() == 0) {
+            throw new RuntimeException("ops");
+        }
         log.info("pizza order with id {}", pizzaOrderDto.getPizzaId());
     }
 

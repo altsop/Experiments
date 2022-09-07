@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd"
+                   logicalFilePath="changelog/baseline.xml">
+
+    <changeSet id="201602261400-schemas" author="baseline">
+        <sql>
+            CREATE SCHEMA Gym
+        </sql>
+    </changeSet>
+
+    <changeSet id="2022-07-29-0000-client-table" author="aleksei.tsypov">
+        <sql>
+            CREATE TABLE Customer
+            (
+                uuid UUID NOT NULL PRIMARY KEY,
+                name VARCHAR(256) NOT NULL,
+                age  INTEGER      NOT NULL
+            )
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

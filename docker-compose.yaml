@@ -9,3 +9,11 @@ services:
     ports:
       - "5681:5672"
       - "15681:15672"
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
